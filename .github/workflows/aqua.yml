@@ -25,7 +25,7 @@ jobs:
           key: gradle-${{ hashFiles('checksum.txt') }}
 
       - name: Build project and UnitTest
-        run: ./gradlew --write-locks assembleDebug compileDebugUnitTestKotlin 
+        run: ./gradlew --write-locks assembleDebug compileDebugUnitTestKotlin && ls -la
 
       - name: Run Trivy vulnerability scanner in IaC mode
         uses: aquasecurity/trivy-action@master
