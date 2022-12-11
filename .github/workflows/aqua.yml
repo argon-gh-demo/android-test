@@ -26,7 +26,8 @@ jobs:
 
       - name: Build project and UnitTest
         run: ./gradlew assembleDebug compileDebugUnitTestKotlin --write-locks && ls -la
-
+      - name: validate
+        run: ls -la && ls -la build && ls -la app
       - name: Run Trivy vulnerability scanner in IaC mode
         uses: aquasecurity/trivy-action@master
         with:
