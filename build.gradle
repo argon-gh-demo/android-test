@@ -36,6 +36,11 @@ allprojects {
             ktlint(ktlintVersion)
         }
     }
+    dependencyLocking {   
+
+lockAllConfigurations()  
+
+} 
 }
 
 subprojects {
@@ -78,9 +83,5 @@ ext {
     rulesVersion = '1.0.1'
     timberVersion = '4.7.1'
     truthVersion = '1.1.2'
-dependencyLocking {   
 
-lockAllConfigurations()  
-
-} 
 }
